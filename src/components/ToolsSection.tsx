@@ -1,4 +1,4 @@
-// components/ToolsSection.tsx
+import Image from "next/image";
 
 export function ToolsSection() {
   return (
@@ -24,7 +24,7 @@ export function ToolsSection() {
             </h3>
             <div className="flex items-center justify-center space-x-4">
               <div>
-                <img
+                <Image
                   src="/images/tools/laravel.png"
                   alt="Laravel"
                   className="mx-auto h-12"
@@ -34,7 +34,7 @@ export function ToolsSection() {
                 </p>
               </div>
               <div>
-                <img
+                <Image
                   src="/images/tools/mysql.png"
                   alt="MySQL"
                   className="mx-auto h-12"
@@ -53,7 +53,7 @@ export function ToolsSection() {
             </h3>
             <div className="flex items-center justify-center space-x-4">
               <div>
-                <img
+                <Image
                   src="/images/tools/bootstrap.png"
                   alt="Bootstrap"
                   className="mx-auto h-12"
@@ -63,7 +63,7 @@ export function ToolsSection() {
                 </p>
               </div>
               <div>
-                <img
+                <Image
                   src="/images/tools/tailwindcss.png"
                   alt="Tailwind CSS"
                   className="mx-auto h-12"
@@ -73,7 +73,7 @@ export function ToolsSection() {
                 </p>
               </div>
               <div>
-                <img
+                <Image
                   src="/images/tools/react.png"
                   alt="React"
                   className="mx-auto h-12"
@@ -92,7 +92,7 @@ export function ToolsSection() {
             </h3>
             <div className="flex items-center justify-center space-x-4">
               <div>
-                <img
+                <Image
                   src="/images/tools/react.png"
                   alt="React Native"
                   className="mx-auto h-12"
@@ -102,7 +102,7 @@ export function ToolsSection() {
                 </p>
               </div>
               <div>
-                <img
+                <Image
                   src="/images/tools/kotlin.png"
                   alt="Kotlin"
                   className="mx-auto h-12"
@@ -121,7 +121,7 @@ export function ToolsSection() {
             </h3>
             <div className="flex items-center justify-center space-x-4">
               <div>
-                <img
+                <Image
                   src="/images/tools/figma.png"
                   alt="Figma"
                   className="mx-auto h-12"
@@ -131,7 +131,7 @@ export function ToolsSection() {
                 </p>
               </div>
               <div>
-                <img
+                <Image
                   src="/images/tools/adobe.png"
                   alt="Adobe"
                   className="mx-auto h-12"
@@ -150,7 +150,7 @@ export function ToolsSection() {
             </h3>
             <div className="flex items-center justify-center space-x-4">
               <div>
-                <img
+                <Image
                   src="/images/tools/ptisp.png"
                   alt="PTisp"
                   className="mx-auto h-12"

@@ -1,14 +1,13 @@
 // components/ServicesSection.tsx
 
-import { FaChartLine, FaChessQueen,  } from 'react-icons/fa'
-import { FaHandshakeSimple } from 'react-icons/fa6';
+import { FaChartLine, FaChessQueen } from "react-icons/fa";
+import { FaHandshakeSimple } from "react-icons/fa6";
 // O usa <i className="fa-solid fa-..."></i> si prefieres Font Awesome clásico.
 
-// @ts-ignore
-import {HeroBgPlant} from './Hero/HeroBgPlant';
-import ShapeWave from './Hero/HeroBgWave';
+import { HeroBgPlant } from "./Hero/HeroBgPlant";
+import ShapeWave from "./Hero/HeroBgWave";
 
-export  function ServicesSection() {
+export function ServicesSection() {
   return (
     <section
       className="
@@ -28,7 +27,8 @@ export  function ServicesSection() {
                   mb-4
                 "
               >
-                Abrimos Novos Caminhos para o seu sucesso e reconhecimento global
+                Abrimos Novos Caminhos para o seu sucesso e reconhecimento
+                global
               </h2>
               <p
                 className="
@@ -67,7 +67,7 @@ export  function ServicesSection() {
                     text-[rgba(74,108,247,1)]
                   "
                 >
-                  <FaChartLine className='w-[40px] h-[35px]' />
+                  <FaChartLine className="w-[40px] h-[35px]" />
                 </div>
               </div>
               <h3
@@ -85,8 +85,8 @@ export  function ServicesSection() {
                 "
               >
                 Integramos as últimas inovações tecnológicas para transformar a
-                maneira como sua empresa opera, proporcionando mais eficiência
-                e resultados concretos. Estamos prontos para elevar o seu negócio.
+                maneira como sua empresa opera, proporcionando mais eficiência e
+                resultados concretos. Estamos prontos para elevar o seu negócio.
               </p>
 
               {/* SVG decorativo */}
@@ -115,7 +115,7 @@ export  function ServicesSection() {
                     text-[rgba(74,108,247,1)]
                   "
                 >
-                  <FaChessQueen className='w-[35px] h-[30px]'/>
+                  <FaChessQueen className="w-[35px] h-[30px]" />
                 </div>
               </div>
               <h3
@@ -128,8 +128,9 @@ export  function ServicesSection() {
               </h3>
               <p className="text-base leading-relaxed text-[rgba(149,156,177,1)]">
                 Desenvolvemos experiências visuais que contam a história da sua
-                marca de forma autêntica e envolvente. Cada detalhe é pensado
-                e executado para conectar sua identidade à essência do seu projeto.
+                marca de forma autêntica e envolvente. Cada detalhe é pensado e
+                executado para conectar sua identidade à essência do seu
+                projeto.
               </p>
 
               <div className="absolute bottom-0 right-0 z-[1]">
@@ -157,7 +158,7 @@ export  function ServicesSection() {
                     text-[rgba(74,108,247,1)]
                   "
                 >
-                  <FaHandshakeSimple  className='w-[40px] h-[30px]'/>
+                  <FaHandshakeSimple className="w-[40px] h-[30px]" />
                   {/* <FaHandshake className="text-2xl" /> */}
                 </div>
               </div>
@@ -170,9 +171,10 @@ export  function ServicesSection() {
                 Parcerias de Impacto e Importância
               </h3>
               <p className="text-base leading-relaxed text-[rgba(149,156,177,1)]">
-                Mais do que fornecer serviços, construímos relações de confiança.
-                Com várias parcerias de extrema importância, que superam
-                expectativas e consolidam para ajudar a alcançar o seu objetivo.
+                Mais do que fornecer serviços, construímos relações de
+                confiança. Com várias parcerias de extrema importância, que
+                superam expectativas e consolidam para ajudar a alcançar o seu
+                objetivo.
               </p>
 
               <div className="absolute bottom-0 right-0 z-[1]">
@@ -186,5 +188,5 @@ export  function ServicesSection() {
       {/* Forma wave (shape) al final de la sección */}
       <ShapeWave />
     </section>
-  )
+  );
 }

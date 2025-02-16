@@ -1,7 +1,6 @@
 // components/HeroSection.tsx
 import HeroBgCircles from "./Hero/HeroBgCircles";
 import HeroBgLines from "./Hero/HeroBgLines";
-import HeroBgWave from "./Hero/HeroBgWave";
 
 export function HeroSection() {
   return (
@@ -16,7 +15,6 @@ export function HeroSection() {
       {/* Fondo con SVGs */}
       <HeroBgCircles />
       <HeroBgLines />
-      {/* <HeroBgWave /> */}
 
       {/* Contenido */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-2xl">
