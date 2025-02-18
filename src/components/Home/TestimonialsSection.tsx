@@ -16,6 +16,7 @@ export function TestimonialsCTASection() {
 
   // Se asume que t("testimonialsCTASection.testimonials") retorna un array de strings.
   const testimonials = t("testimonialsCTASection.testimonials") as unknown as string[];
+  // console.log(testimonials);
 
   return (
     <section className="relative z-10 pt-[120px] bg-[rgba(11,17,58,1)]">
