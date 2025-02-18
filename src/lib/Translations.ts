@@ -1,5 +1,6 @@
 import { custom404 } from "./translations/404";
 import { GlobalAbout } from "./translations/About";
+import { ContactGlobal } from "./translations/Contact";
 import { globalHome } from "./translations/Home";
 
 export const translations = {
@@ -19,6 +20,7 @@ export const translations = {
     ...globalHome.pt,
     custom404: { ...custom404.pt },
     about: { ...GlobalAbout.pt }, 
+    contact: { ...ContactGlobal.pt },
   },
   en: {
     nav: {
@@ -36,6 +38,7 @@ export const translations = {
     ...globalHome.en,
     custom404: { ...custom404.en },
     about: { ...GlobalAbout.en },
+    contact: { ...ContactGlobal.pt },
   },
 };
 
