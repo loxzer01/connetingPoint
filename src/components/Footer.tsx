@@ -1,18 +1,15 @@
-// components/Footer.tsx
+"use client";
 
 import Link from "next/link";
 import { Circles } from "./Hero/Circles";
 import { Cubo } from "./Hero/Cubo";
+import { useI18n } from "@/lib/useTranslations";
 
 export default function Footer() {
+  const { t } = useI18n();
+
   return (
-    <footer
-      className="
-      relative z-10
-      bg-[rgba(74,108,247,0.05)]
-      pt-[100px]
-    "
-    >
+    <footer className="relative z-10 bg-[rgba(12,18,62,1)] pt-[100px]">
       {/* SVG decorativos */}
       <div className="absolute right-0 top-14 z-[-1]">
         <Circles />
@@ -33,12 +30,11 @@ export default function Footer() {
                   className="mb-2 block h-14"
                 />
                 <span className="self-center text-2xl font-semibold text-white">
-                  Connecting Points
+                  {t("footer.logo.tagline")}
                 </span>
               </Link>
               <p className="mb-9 text-base font-medium leading-relaxed text-[rgba(149,156,177,1)]">
-                Fique dentro de todas as nossas novidades siga nossas redes
-                sociais
+                {t("footer.logo.description")}
               </p>
               <div className="flex items-center space-x-6">
                 <Link
@@ -72,14 +68,16 @@ export default function Footer() {
           {/* Columna 2 */}
           <div className="w-full sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12 px-8">
             <div className="mb-16">
-              <h2 className="mb-10 text-xl font-bold text-white">Links</h2>
+              <h2 className="mb-10 text-xl font-bold text-white">
+                {t("footer.links.header")}
+              </h2>
               <ul>
                 <li>
                   <Link
                     href="/about"
                     className="mb-4 inline-block text-base font-medium text-[rgba(149,156,177,1)] hover:text-[rgba(74,108,247,1)]"
                   >
-                    Sobre Nós
+                    {t("footer.links.about")}
                   </Link>
                 </li>
                 <li>
@@ -87,7 +85,7 @@ export default function Footer() {
                     href="/contact"
                     className="mb-4 inline-block text-base font-medium text-[rgba(149,156,177,1)] hover:text-[rgba(74,108,247,1)]"
                   >
-                    Contato
+                    {t("footer.links.contact")}
                   </Link>
                 </li>
               </ul>
@@ -97,14 +95,16 @@ export default function Footer() {
           {/* Columna 3 */}
           <div className="w-full md:w-1/2 lg:w-4/12 xl:w-3/12 px-8">
             <div className="mb-16">
-              <h2 className="mb-10 text-xl font-bold text-white">Contato</h2>
+              <h2 className="mb-10 text-xl font-bold text-white">
+                {t("footer.contact.header")}
+              </h2>
               <ul>
                 <li>
                   <Link
                     href="mailto:admin@connectingpoints.pt"
                     className="mb-4 inline-block text-base font-medium text-[rgba(149,156,177,1)] hover:text-[rgba(74,108,247,1)]"
                   >
-                    admin@connectingpoints.pt
+                    {t("footer.contact.email")}
                   </Link>
                 </li>
                 <li>
@@ -112,7 +112,7 @@ export default function Footer() {
                     href="tel:+351924423249"
                     className="mb-4 inline-block text-base font-medium text-[rgba(149,156,177,1)] hover:text-[rgba(74,108,247,1)]"
                   >
-                    +351 924 423 249
+                    {t("footer.contact.phone")}
                   </Link>
                 </li>
               </ul>
@@ -123,7 +123,7 @@ export default function Footer() {
           <div className="w-full sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12 px-8">
             <div className="mb-16">
               <h2 className="mb-10 text-xl font-bold text-white">
-                Termos e Condições
+                {t("footer.terms.header")}
               </h2>
               <ul>
                 <li>
@@ -131,7 +131,7 @@ export default function Footer() {
                     href="/privacy-policy"
                     className="mb-4 inline-block text-base font-medium text-[rgba(149,156,177,1)] hover:text-[rgba(74,108,247,1)]"
                   >
-                    Política de Privacidade
+                    {t("footer.terms.privacy")}
                   </Link>
                 </li>
                 <li>
@@ -140,7 +140,7 @@ export default function Footer() {
                     className="mb-4 inline-block text-base font-medium text-[rgba(149,156,177,1)] hover:text-[rgba(74,108,247,1)]"
                     target="_blank"
                   >
-                    Livro de reclamações
+                    {t("footer.terms.complaints")}
                   </Link>
                 </li>
               </ul>
@@ -149,9 +149,10 @@ export default function Footer() {
         </div>
 
         <div className="py-4">
-          <p className="text-center text-base text-white">
-            &copy; 2025 Todos os direitos reservados
-          </p>
+          <p
+            className="text-center text-base text-white"
+            dangerouslySetInnerHTML={{ __html: t("footer.copyright") }}
+          />
         </div>
       </div>
     </footer>
