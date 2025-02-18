@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,9 +17,20 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  /* font-family: "Rara", sans-serif; */
-
+  tab-size: 4;
+  font-family: Figtree, ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  scroll-behavior: smooth;
 }
 
+/* modificar el scroll de la pagina */
+::-webkit-scrollbar {
+  width: 5px;
+}
 
-/* modificar .scroll si el scroll en y de body se mueve de su posicion inicial  */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(74 108 247 / var(--tw-bg-opacity));
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}

@@ -1,3 +1,4 @@
+"use client";
 // components/hero/HeroBgLines.tsx
 export default function HeroBgLines() {
     return (
@@ -8,6 +9,8 @@ export default function HeroBgLines() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="absolute bottom-0 -left-36 z-[-1] md:left-0"
+        data-aos="fade-right"
+      data-aos-delay="200"
       >
         <path
           d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
