@@ -16,7 +16,7 @@ export function Circles() {
       ></circle>
       <mask
         id="mask0_94:899"
-        style={{"mask-type":"alpha"} as React.CSSProperties}
+        style={{"maskType":"alpha"} as React.CSSProperties}
         maskUnits="userSpaceOnUse"
         x="0"
         y="0"

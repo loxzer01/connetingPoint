@@ -1,5 +1,12 @@
-// components/hero/HeroBgCircles.tsx
-export default function HeroBgCircles() {
+  "use client";
+  // components/hero/HeroBgCircles.tsx
+  export default function HeroBgCircles(
+    props: any = {
+      className: "absolute z-[-1] -top-72 right-0 md:top-0",
+      "data-aos": "fade-down",
+      "data-aos-delay": "200",
+    }
+  ) {
     return (
       <svg
         width="450"
@@ -7,7 +14,7 @@ export default function HeroBgCircles() {
         viewBox="0 0 450 556"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute -top-72 right-0 z-[-1] md:top-0"
+        {...props}
       >
         <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25_217)" />
         <circle cx="18" cy="182" r="18" fill="url(#paint1_radial_25_217)" />
@@ -123,6 +130,5 @@ export default function HeroBgCircles() {
           </linearGradient>
         </defs>
       </svg>
-    )
+    );
   }
-  

@@ -2,9 +2,15 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { HeroSection, Navbar, ServicesSection, TestimonialsCTASection } from "@/components";
-import { ToolsSection } from "@/components/ToolsSection";
-import Footer from "@/components/Footer";
+import {
+  HeroSection,
+  Navbar,
+  ServicesSection,
+  TestimonialsCTASection,
+} from "@/components/Home";
+import { ToolsSection } from "@/components/Home/ToolsSection";
+import Footer from "@/components/Home/Footer";
+import { Loading } from "@/components/Home/Loading";
 
 export default function Home() {
   useEffect(() => {
@@ -12,12 +18,11 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Navbar />
+      <Loading />
       <HeroSection />
       <ServicesSection />
       <ToolsSection />
       <TestimonialsCTASection />
-      <Footer />
     </>
   );
 }

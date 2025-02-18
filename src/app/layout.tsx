@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import '../styles/globals.css';
+import "../styles/globals.css";
 import Head from "next/head";
+import { Navbar } from "@/components/Home";
+import Footer from "@/components/Home/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,13 +17,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Connecting Points",
-  description: "Especializados em desenvolvimento web, redes, infraestrutura e design gráfico, oferecemos soluções completas para impulsionar a presença digital da sua empresa. Nosso foco principal é o desenvolvimento web, criando websites modernos, funcionais e personalizados para destacar seu negócio online. Conte com uma equipe dedicada para transformar ideias em resultados eficientes e inovadores.p",
+  description:
+    "Especializados em desenvolvimento web, redes, infraestrutura e design gráfico, oferecemos soluções completas para impulsionar a presença digital da sua empresa. Nosso foco principal é o desenvolvimento web, criando websites modernos, funcionais e personalizados para destacar seu negócio online. Conte com uma equipe dedicada para transformar ideias em resultados eficientes e inovadores.p",
 };
 
 export default function RootLayout({
   children,
+  title = "Connecting Points",
+  description = "",
 }: Readonly<{
   children: React.ReactNode;
+  title?: string;
+  description?: string;
 }>) {
   return (
     <html lang="pt">
@@ -67,8 +74,8 @@ export default function RootLayout({
           href="/favicons/favicon-96x96.png"
           sizes="96x96"
         /> */}
-        {/* <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" /> */}
-        <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        {/* <link  rel="shortcut icon" type="image/svg+xml" href="./favicons/favicon.svg" /> */}
+        <link rel="shortcut icon" href="/favicon.ico" />
         {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -78,7 +85,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
