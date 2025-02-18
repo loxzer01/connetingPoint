@@ -1,8 +1,6 @@
-import { footer } from "./translations/Footer";
-import { Home } from "./translations/Home";
-import { servicesSection } from "./translations/servicesSection";
-import { testimonialsCTASection } from "./translations/testimonialsCTASection";
-import { toolsSection } from "./translations/ToolsSection";
+import { custom404 } from "./translations/404";
+import { GlobalAbout } from "./translations/About";
+import { globalHome } from "./translations/Home";
 
 export const translations = {
   pt: {
@@ -18,12 +16,9 @@ export const translations = {
         design: "Design Gráfico",
       },
     },
-    home: { ...Home.pt },
-    servicesSection: { ...servicesSection.pt },
-    toolsSection: { ...toolsSection.pt },
-    testimonialsCTASection: { ...testimonialsCTASection.en },
-    footer: { ...footer.pt },
-
+    ...globalHome.pt,
+    custom404: { ...custom404.pt },
+    about: { ...GlobalAbout.pt }, 
   },
   en: {
     nav: {
@@ -38,11 +33,9 @@ export const translations = {
         design: "Graphic Design",
       },
     },
-    home: { ...Home.en },
-    servicesSection: { ...servicesSection.en },
-    toolsSection: { ...toolsSection.en },
-    testimonialsCTASection: { ...testimonialsCTASection.en },
-    footer: { ...footer.en },
+    ...globalHome.en,
+    custom404: { ...custom404.en },
+    about: { ...GlobalAbout.en },
   },
 };
 

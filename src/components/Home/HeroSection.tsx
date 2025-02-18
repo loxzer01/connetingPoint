@@ -17,7 +17,15 @@ export function HeroSection() {
   return (
     <section className="relative z-10 flex h-screen w-full items-center justify-center overflow-hidden bg-[rgba(9,14,52,1)]">
       {/* Fondos con SVGs */}
-      <HeroBgCircles />
+
+      <div
+        className="absolute z-[-1] -top-72 right-0 md:top-0"
+        data-aos="fade-down"
+        data-aos-delay="200"
+      >
+        {/* <HeroBgCircles /> */}
+        <HeroBgCircles className="" />
+      </div>
       <HeroBgLines />
 
       {/* Contenido con animaciones y traducción */}

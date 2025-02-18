@@ -7,10 +7,10 @@ import {
   Navbar,
   ServicesSection,
   TestimonialsCTASection,
-} from "@/components";
-import { ToolsSection } from "@/components/ToolsSection";
-import Footer from "@/components/Footer";
-import { Loading } from "@/components/Loading";
+} from "@/components/Home";
+import { ToolsSection } from "@/components/Home/ToolsSection";
+import Footer from "@/components/Home/Footer";
+import { Loading } from "@/components/Home/Loading";
 
 export default function Home() {
   useEffect(() => {
@@ -19,12 +19,10 @@ export default function Home() {
   return (
     <>
       <Loading />
-      <Navbar />
       <HeroSection />
       <ServicesSection />
       <ToolsSection />
       <TestimonialsCTASection />
-      <Footer />
     </>
   );
 }
