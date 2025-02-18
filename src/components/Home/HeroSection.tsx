@@ -9,10 +9,15 @@ import { useI18n } from "@/lib/useTranslations";
 
 export function HeroSection() {
   const { t } = useI18n();
-
   useEffect(() => {
     AOS.init({ once: true, duration: 1000 });
   }, []);
+
+  const heroTitle = t("home.hero.title");
+  if (typeof heroTitle !== "string") {
+    console.error("La clave 'hero.title' debe ser una cadena y no un objeto:", heroTitle);
+    return null;
+  }
 
   return (
     <section className="relative z-10 flex h-screen w-full items-center justify-center overflow-hidden bg-[rgba(9,14,52,1)]">
@@ -23,7 +28,6 @@ export function HeroSection() {
         data-aos="fade-down"
         data-aos-delay="200"
       >
-        {/* <HeroBgCircles /> */}
         <HeroBgCircles className="" />
       </div>
       <HeroBgLines />
@@ -35,7 +39,7 @@ export function HeroSection() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          {t("home.hero.title")}
+          {heroTitle}
         </h1>
         <p
           className="mb-12 text-md font-medium text-white opacity-90 md:text-xl"

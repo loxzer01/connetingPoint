@@ -22,13 +22,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-  title = "Connecting Points",
-  description = "",
+  children
 }: Readonly<{
   children: React.ReactNode;
-  title?: string;
-  description?: string;
 }>) {
   return (
     <html lang="pt">

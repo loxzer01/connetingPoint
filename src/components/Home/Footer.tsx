@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Circles } from "./Hero/Circles";
 import { Cubo } from "./Hero/Cubo";
 import { useI18n } from "@/lib/useTranslations";
+import Image from "next/image";
 
 export default function Footer() {
   const { t } = useI18n();
@@ -24,10 +25,12 @@ export default function Footer() {
           <div className="w-full md:w-1/2 lg:w-4/12 xl:w-5/12 px-8">
             <div className="mb-16 max-w-[360px]">
               <Link href="/" className="mb-8 flex flex-col items-center">
-                <img
+                <Image
                   src="/images/logos/icon-background-transparent.png"
                   alt="logo"
                   className="mb-2 block h-14"
+                  width={56}
+                  height={56}
                 />
                 <span className="self-center text-2xl font-semibold text-white">
                   {t("footer.logo.tagline")}

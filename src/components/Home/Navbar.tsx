@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useI18n, dictionary } from "@/lib/useTranslations";
 import { Language } from "@/lib/Translations";
+import Image from "next/image";
 
 // Actualizamos los elementos de navegación para que las claves coincidan con la estructura de las traducciones.
 const navItems = [
@@ -123,7 +124,7 @@ function LanguageSwitcher({
         className="flex items-center rounded-md px-4 py-2 font-semibold hover:text-[rgba(74,108,247,1)] focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <img src={`/images/languages/${language}.png`} alt={language} className="mr-2 h-5 w-5 rounded-full" />
+        <Image src={`/images/languages/${language}.png`} alt={language} width={20} height={20} className="mr-2 h-5 w-5 rounded-full" />
         {dictionary[language]}
         <svg className="ml-1 h-5 w-5" fill="none" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -139,7 +140,7 @@ function LanguageSwitcher({
             }}
           >
             <div className="inline-flex items-center">
-              <img src={`/images/languages/${other}.png`} alt={other} className="mr-2 h-3.5 w-3.5 rounded-full" />
+              <Image src={`/images/languages/${other}.png`} alt={other} width={14} height={14} className="mr-2 h-3.5 w-3.5 rounded-full" />
               <span>{dictionary[other]}</span>
             </div>
           </button>
@@ -163,7 +164,7 @@ export function Navbar() {
           {/* Logo y marca */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 py-4">
-              <img src="/images/logos/icon-background-transparent.png" alt="Logo" className="h-8" />
+              <Image src="/images/logos/icon-background-transparent.png" alt="Logo" width={32} height={32} className="h-8" />
               <span className="text-xl font-semibold">Connecting Points</span>
             </Link>
           </div>

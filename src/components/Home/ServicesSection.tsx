@@ -11,15 +11,22 @@ import { useI18n } from "@/lib/useTranslations";
 
 export function ServicesSection() {
   const { t } = useI18n();
-
   useEffect(() => {
     AOS.init({ once: true, duration: 1000 });
   }, []);
+
+  // Verifica que accedes a la propiedad correcta, por ejemplo "services.title"
+  const servicesTitle = t("servicesSection.title");
+  if (typeof servicesTitle !== "string") {
+    console.error("La clave 'services.title' debe ser una cadena y no un objeto:", servicesTitle);
+    return null;
+  }
 
   return (
     <section
       className="relative z-10 py-[120px] bg-[rgba(11,17,58,1)] bg-opacity-[0.03]"
     >
+      <h2>{servicesTitle}</h2>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Texto de encabezado */}
         <div className="flex flex-wrap mx-[-16px]">

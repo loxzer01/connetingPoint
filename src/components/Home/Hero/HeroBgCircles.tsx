@@ -1,11 +1,11 @@
   "use client";
   // components/hero/HeroBgCircles.tsx
   export default function HeroBgCircles(
-    props: any = {
+    props = {
       className: "absolute z-[-1] -top-72 right-0 md:top-0",
       "data-aos": "fade-down",
       "data-aos-delay": "200",
-    }
+    } as React.SVGProps<SVGSVGElement> 
   ) {
     return (
       <svg
