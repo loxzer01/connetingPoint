@@ -121,7 +121,7 @@ function LanguageSwitcher({
   return (
     <div className="relative">
       <button
-        className="flex items-center rounded-md px-4 py-2 font-semibold hover:text-[rgba(74,108,247,1)] focus:outline-none"
+        className="flex items-center text-gray-700 rounded-md px-4 py-2 font-semibold hover:text-[rgba(74,108,247,1)] focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
       >
         <Image src={`/images/languages/${language}.png`} alt={language} width={20} height={20} className="mr-2 h-5 w-5 rounded-full" />
