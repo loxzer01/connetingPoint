@@ -24,7 +24,7 @@ const storedLanguage: Language | null =
 
 export const useI18n = create<I18nStore>((set, get) => ({
   language: storedLanguage || "pt",
-  other: storedLanguage === "pt" ? "en" : "pt",
+  other: storedLanguage === "en" ? "pt" : "en",
   setLanguage: (language: Language) => {
     set({ language, other: language === "pt" ? "en" : "pt" });
     try {
